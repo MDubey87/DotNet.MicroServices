@@ -1,0 +1,35 @@
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
+namespace Services.ProductApi.Extensions
+{
+    public static class WebApplicationBuilderExtension
+    {
+        public static WebApplicationBuilder AddApiAuthentication(this WebApplicationBuilder builder)
+        {
+            var secret = builder.Configuration.GetValue<string>("ApiSettings:SecretKey") ?? string.Empty;
+            var issuer = builder.Configuration.GetValue<string>("ApiSettings:Issuer");
+            var audience = builder.Configuration.GetValue<string>("ApiSettings:Audience");
+            var key = Encoding.ASCII.GetBytes(secret);
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = issuer,
+                    ValidAudience = audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                };
+            });
+            return builder;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/FrontEnd/">
+    <Project Path="D:/GitProjects/DotNet.MicroServices/Application.Web/Application.Web.csproj" />
+  </Folder>
+  <Folder Name="/Gateway/" />
+  <Folder Name="/Integration/" />
+  <Folder Name="/Services/">
+    <Project Path="D:/GitProjects/DotNet.MicroServices/Services.AuthApi/Services.AuthApi.csproj" Id="af0db512-72c4-44dc-a265-89814fef1843" />
+    <Project Path="D:/GitProjects/DotNet.MicroServices/Services.CouponApi/Services.CouponApi.csproj" />
+    <Project Path="Services.ProductApi/Services.ProductApi.csproj" Id="912399cf-d9b5-46c1-9afe-4bb58053ea1f" />
+  </Folder>
+</Solution>
