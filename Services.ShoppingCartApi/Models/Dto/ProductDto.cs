@@ -1,8 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Application.Web.Models
+﻿namespace Services.ShoppingCartApi.Models.Dto
 {
-    public class ProductResponse
+    public class ProductDto
     {
         public int ProductId { get; set; }
         public string Name { get; set; } = string.Empty;
@@ -11,7 +9,5 @@ namespace Application.Web.Models
         public string CategoryName { get; set; } = string.Empty;
         public string? ImageUrl { get; set; }
         public string? ImageLocalPath { get; set; }
-        [Range(1, 100)]
-        public int Count { get; set; } = 1;
     }
 }

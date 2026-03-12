@@ -79,7 +79,7 @@ namespace Application.Web.Services
                 case HttpStatusCode.Unauthorized:
                     return "Unauthorized";
                 case HttpStatusCode.Forbidden:
-                    return "Forbidden. You do not have permission to access this resource.";
+                    return "Access Denied";
                 case HttpStatusCode.NotFound:
                     return "Resource not found.";
                 case HttpStatusCode.InternalServerError:

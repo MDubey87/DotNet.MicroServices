@@ -34,7 +34,7 @@ namespace Services.ProductApi.Repositories
 
         public async Task<ProductDto> Create(RequestDto product)
         {
-            var newProduct = product.ToCouponEntity();
+            var newProduct = product.ToProductEntity();
             _context.Products.Add(newProduct);
             return await _context.SaveChangesAsync()
                 .ContinueWith(t => newProduct.ToProductDto());

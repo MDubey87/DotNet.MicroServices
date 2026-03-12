@@ -7,7 +7,7 @@ namespace Services.CouponApi.Controllers
 {
     [Route("api/coupon")]
     [ApiController]
-    [Authorize(Roles = "ADMIN")]
+    //[Authorize(Roles = "ADMIN")]
     public class CouponController : ControllerBase
     {
         private readonly ICouponRepository _couponRepository;

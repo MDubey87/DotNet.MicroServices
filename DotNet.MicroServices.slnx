@@ -8,5 +8,6 @@
     <Project Path="D:/GitProjects/DotNet.MicroServices/Services.AuthApi/Services.AuthApi.csproj" Id="af0db512-72c4-44dc-a265-89814fef1843" />
     <Project Path="D:/GitProjects/DotNet.MicroServices/Services.CouponApi/Services.CouponApi.csproj" />
     <Project Path="Services.ProductApi/Services.ProductApi.csproj" Id="912399cf-d9b5-46c1-9afe-4bb58053ea1f" />
+    <Project Path="Services.ShoppingCartApi/Services.ShoppingCartApi.csproj" Id="0b4a2d9b-83b7-4ecd-802d-b2726dab4fd5" />
   </Folder>
 </Solution>

@@ -18,7 +18,7 @@ namespace Services.ProductApi.Mapper
                 ImageLocalPath = coupon.ImageLocalPath
             };
         }
-        public static Product ToCouponEntity(this ProductDto coupon)
+        public static Product ToProductEntity(this ProductDto coupon)
         {
             return new Product
             {
@@ -31,7 +31,7 @@ namespace Services.ProductApi.Mapper
                 ImageLocalPath = coupon.ImageLocalPath
             };
         }
-        public static Product ToCouponEntity(this RequestDto product)
+        public static Product ToProductEntity(this RequestDto product)
         {
             return new Product
             {
